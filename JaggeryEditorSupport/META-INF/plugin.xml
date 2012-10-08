@@ -1,0 +1,34 @@
+<idea-plugin version="2">
+    <name>JaggeryEditorSupport</name>
+    <description>This plugin gives syntax highlighting, code completion for Jaggery</description>
+    <version>1.0</version>
+    <vendor>WSO2</vendor>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="117.798"/>
+
+    <application-components>
+        <!-- Add your application components here -->
+
+
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+        <fileTypeFactory implementation="org.wso2.fileType.JaggeryFileTypeFactory"/>
+        <lang.parserDefinition implementationClass="org.wso2.psi.JaggeryParserDefinition" language="jaggery"/>
+
+        <lang.fileViewProviderFactory language="jaggery"
+                                      implementationClass="org.wso2.fileType.JaggeryFileViewProviderFactory"/>
+
+
+    </extensions>
+</idea-plugin>
